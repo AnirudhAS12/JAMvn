@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="21460" started-at="2018-08-20T07:02:06Z" finished-at="2018-08-20T07:02:27Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="21460" started-at="2018-08-20T07:02:06Z" finished-at="2018-08-20T07:02:27Z">
+      <class name="EmailTest">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:EmailTest@48eff760]" name="beforeClass" is-config="true" duration-ms="11" started-at="2018-08-20T12:32:06Z" finished-at="2018-08-20T12:32:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="FAIL" signature="sampleTest()[pri:0, instance:EmailTest@48eff760]" name="sampleTest" duration-ms="10" started-at="2018-08-20T12:32:06Z" finished-at="2018-08-20T12:32:06Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [20] but found [10]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [20] but found [10]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
+	at org.testng.Assert.assertEquals(Assert.java:115)
+	at org.testng.Assert.assertEquals(Assert.java:388)
+	at org.testng.Assert.assertEquals(Assert.java:398)
+	at EmailTest.sampleTest(EmailTest.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampleTest -->
+        <test-method status="FAIL" signature="afterClass(org.testng.ITestResult)[pri:0, instance:EmailTest@48eff760]" name="afterClass" is-config="true" duration-ms="21391" started-at="2018-08-20T12:32:06Z" finished-at="2018-08-20T12:32:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=sampleTest status=FAILURE method=EmailTest.sampleTest()[pri:0, instance:EmailTest@48eff760] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.apache.commons.mail.EmailException">
+            <message>
+              <![CDATA[Sending the email to the following server failed : smtp.gmail.com:465]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.apache.commons.mail.EmailException: Sending the email to the following server failed : smtp.gmail.com:465
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1421)
+	at org.apache.commons.mail.Email.send(Email.java:1448)
+	at SendEmailJava.sendEmail(SendEmailJava.java:22)
+	at EmailTest.afterClass(EmailTest.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:723)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 465; timeout 60000;
+  nested exception is:
+	java.net.ConnectException: Connection timed out: connect
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2053)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:697)
+	at javax.mail.Service.connect(Service.java:386)
+	at javax.mail.Service.connect(Service.java:245)
+	at javax.mail.Service.connect(Service.java:194)
+	at javax.mail.Transport.send0(Transport.java:253)
+	at javax.mail.Transport.send(Transport.java:124)
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1411)
+	... 30 more
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.connect(Unknown Source)
+	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:310)
+	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:215)
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2019)
+	... 37 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.apache.commons.mail.EmailException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- EmailTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
